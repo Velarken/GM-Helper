@@ -1,0 +1,284 @@
+:root {
+    --blue:rgb(145, 191, 202);
+    --orange:rgb(231, 180, 120);
+    --light-yellow:rgb(250, 243, 181);
+    --dark-tan:rgb(206, 185, 155);
+}
+body {
+    background: #6e17e8;
+    background: linear-gradient(90deg,rgba(110, 23, 232, 1) 0%, rgba(245, 225, 47, 1) 100%);
+    font-family: sans-serif;
+    position:relative;
+}
+.page-container {
+    display:grid;
+    grid-template: repeat(auto-fit,auto) / 1fr;
+    
+}
+.nav-container {
+    display:flex;
+    position:sticky;
+    top:0;
+    
+    
+}
+.nav-menu {
+    display:flex;
+    flex:1;
+    position:fixed;
+    top:0;
+    list-style: none;
+    color:white;
+    font-size:24px;
+    background: #6e17e8;
+    background: linear-gradient(90deg,rgba(110, 23, 232, 1) 0%, rgba(245, 225, 47, 1) 100%);
+    width:100%;
+    
+}
+li {
+    flex:1;
+    text-wrap: nowrap;
+    text-align: center;
+    padding:10px;
+}
+h4 {
+    text-align: center;
+    color:white;
+    font-size:24px;
+    flex:1;
+    margin-top:0px;
+}
+.page-title {
+    margin-top:70px;
+    text-align: center;
+    color:white;
+    font-size:50px;
+}
+a:link {
+    color:white;
+    text-decoration: none;
+}
+a:visited {
+    color:white;
+    text-decoration: none;
+}
+.border-img {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(/images/purple-line.png) 30 stretch;
+}
+/* GM Tools Page */
+.dice-roller-container {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(207, 179, 207);
+    border:3px solid purple;
+    border-radius: 12px;
+    padding-bottom:30px;
+    margin-bottom:10px;
+}
+.dice-card {
+    display:flex;
+    flex-direction:column;
+    width: 20%;
+    max-height:150px;
+    margin:50px;
+    flex:1;
+}
+.current-die {
+    height:10vh;
+}
+.reset-dice {
+    margin-top:40px;
+}
+#d4,#d6,#d8,#d10,#d12,#d20,#d100 {
+    flex:1,
+}
+.dice-buttons {
+    display:flex;
+}
+.d4minus, .d6minus, .d8minus, .d10minus, .d12minus, .d20minus, .d100minus {
+    flex:1;
+    margin:10px;
+}
+.d4plus, .d6plus, .d8plus, .d10plus, .d12plus, .d20plus, .d100plus {
+    flex:1;
+    margin:10px;
+}
+.d4-count-display, .d6-count-display, .d8-count-display, .d10-count-display, .d12-count-display, .d20-count-display, .d100-count-display {
+    flex:1;
+    color:white;
+    font-size:18px;
+    text-align: center;
+}
+.d4-roll-output,.d6-roll-output, .d8-roll-output, .d10-roll-output, .d12-roll-output, .d20-roll-output, .d100-roll-output {
+    text-align:center;
+    color:white;
+    font-size:20;
+    margin-top:10px;
+}
+.fear {
+    border:3px solid purple;
+    border-radius: 12px;;
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    background-color:rgb(207, 179, 207);
+}
+.fear-counter-container {
+    display:flex;
+    flex-wrap:nowrap;
+    flex:1;
+    margin-bottom:10px;
+    margin-top:-10px;
+    
+}
+.fear-counter {
+    flex:1;
+    display:flex;
+    border:2px solid purple;
+    background-color: rgb(224, 1, 224);
+    border-radius: 50%;
+    padding:25px;
+    margin:5px;
+    margin-left:0px;
+    text-align: center;
+    color:white;
+    font-weight:700;
+    font-size: 18px;
+    
+    /* This works fine on a half screen, but  */
+}
+/* Artifacts Page */
+.card-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width:375px;
+    height:300px;
+    border-radius: 12px;
+    display:grid;
+    grid-template:1fr / 1fr 4fr;
+    margin:15px;
+    padding:10px;
+    overflow: auto;
+    border:5px solid rgb(255, 255, 255);
+}
+.left-card{
+    grid-area:2/1/3/2;
+    display:grid;
+    grid-template:auto auto auto auto 1fr 1fr / 1fr;
+    justify-content:start;
+    align-items: center;
+    margin:10px;
+}
+ .right-card {
+    grid-area:2/2/3/3;
+    display:grid;
+    grid-template:auto auto auto auto 1fr 1fr / 1fr;
+    justify-content: start;
+    align-items: center;
+    margin:10px;
+}
+/* Item Card Properties */
+.air {
+    background-color: var(--light-yellow) ;
+}
+.fire {
+    background-color: var(--orange) ;
+}
+.earth {
+    background-color: var(--dark-tan) ;
+}
+.water {
+    background-color: var(--blue) ;
+}
+.name-desc{
+    grid-area:1/1/2/3;
+    grid-column-start:1;
+    grid-column-end:3;
+    margin-top:-5px;
+    text-align: center;
+}
+
+.trait {
+    grid-area:1/1/2/2;
+    font-weight:700;
+}
+.range {
+    grid-area:2/1/3/2;
+    font-weight:700;
+}
+.damage {
+    grid-area:3/1/4/2;
+    font-weight:700;
+}
+.burden {
+    grid-area:4/1/5/2;
+    font-weight:700;
+}
+.features {
+    grid-area:5/1/7/2;
+    align-self: start;
+    font-weight:700;
+}
+.class {
+    grid-area:7/1/8/2;
+    font-weight:700;
+}
+
+.trait-desc {
+    grid-area:1/1/2/2;
+}
+.range-desc {
+    grid-area:2/1/3/2;
+}
+.damage-desc {
+    grid-area:3/1/4/2;
+}
+.burden-desc {
+    grid-area:4/1/5/2;
+}
+.features-desc {
+    grid-area:5/1/7/2;
+}
+.class-desc {
+    grid-area:7/1/8/2;
+}
+/* Cheat Sheet Page */
+.cheat-container {
+    display:flex;
+    flex-direction: column;
+    margin:20px;
+}
+.trait-container {
+    display:flex;
+    flex-wrap:wrap;
+    border:3px solid rgb(201, 187, 3);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    width:100%;
+}
+.trait-name {
+    text-align: center;
+    margin:5px;
+}
+.agility, .strength, .finesse, .knowledge, .instinct, .presence {
+    border:3px solid rgb(201, 187, 3);
+    border-radius: 8px;
+    background-color: purple;
+    margin:10px;
+    color:white;
+    font-weight: 500;
+    padding:10px;
+    width:30%;
+    height:20%;
+    flex:1;
+}
