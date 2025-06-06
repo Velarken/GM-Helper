@@ -1,0 +1,150 @@
+:root {
+    --blue:rgb(145, 191, 202);
+    --orange:rgb(231, 180, 120);
+    --light-yellow:rgb(250, 243, 181);
+    --dark-tan:rgb(206, 185, 155);
+}
+body {
+    background: #6e17e8;
+    background: linear-gradient(90deg,rgba(110, 23, 232, 1) 0%, rgba(245, 225, 47, 1) 100%);
+    font-family: sans-serif;
+    position:relative;
+}
+.page-container {
+    display:grid;
+    grid-template: repeat(auto-fit,auto) / 1fr;
+}
+.nav-container {
+    display:flex;
+    position:sticky;
+    top:0;
+}
+.nav-menu {
+    display:flex;
+    flex:1;
+    position:fixed;
+    top:0;
+    list-style: none;
+    color:white;
+    font-size:24px;
+    background: #6e17e8;
+    background: linear-gradient(90deg,rgba(110, 23, 232, 1) 0%, rgba(245, 225, 47, 1) 100%);
+    width:100%;
+}
+li {
+    flex:1;
+    text-wrap: nowrap;
+    text-align: center;
+    padding:10px;
+}
+/* GM Tools Page */
+.dice-roller-container {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(207, 179, 207);
+    border:3px solid purple;
+    border-radius: 12px;
+    padding-bottom:30px;
+    margin-bottom:10px;
+}
+.dice-card {
+    display:flex;
+    flex-direction:column;
+    width: 20%;
+    max-height:150px;
+    margin:50px;
+    flex:1;
+}
+.current-die {
+    height:10vh;
+}
+.reset-dice {
+    margin-top:40px;
+}
+#d4,#d6,#d8,#d10,#d12,#d20,#d100 {
+    flex:1,
+}
+.dice-buttons {
+    display:flex;
+}
+.d4minus, .d6minus, .d8minus, .d10minus, .d12minus, .d20minus, .d100minus {
+    flex:1;
+    margin:10px;
+}
+.d4plus, .d6plus, .d8plus, .d10plus, .d12plus, .d20plus, .d100plus {
+    flex:1;
+    margin:10px;
+}
+.d4-count-display, .d6-count-display, .d8-count-display, .d10-count-display, .d12-count-display, .d20-count-display, .d100-count-display {
+    flex:1;
+    color:white;
+    font-size:18px;
+    text-align: center;
+}
+.d4-roll-output,.d6-roll-output, .d8-roll-output, .d10-roll-output, .d12-roll-output, .d20-roll-output, .d100-roll-output {
+    text-align:center;
+    color:white;
+    font-size:20;
+    margin-top:10px;
+}
+.fear {
+    border:3px solid purple;
+    border-radius: 12px;;
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    background-color:rgb(207, 179, 207);
+}
+.fear-counter-container {
+    display:flex;
+    flex-wrap:nowrap;
+    flex:1;
+    margin-bottom:10px;
+    margin-top:-10px;
+    
+}
+.fear-counter {
+    flex:1;
+    display:flex;
+    border:2px solid purple;
+    background-color: rgb(224, 1, 224);
+    border-radius: 50%;
+    padding:25px;
+    margin:5px;
+    margin-left:0px;
+    text-align: center;
+    color:white;
+    font-weight:700;
+    font-size: 18px;
+    
+    /* This works fine on a half screen, but  */
+}
+.actions {
+    background-color:rgb(207, 179, 207);
+}
+.action-counter-container {
+    display:flex;
+    border:3px solid purple;
+    border-radius: 12px;;
+    padding:10px;
+}
+.action-card {
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    justify-content: space-around;
+    width:30vw;
+    height:30vh;
+    border:1px solid green;
+}
+.action-counter {
+    width:15vw;
+    height:15vh;
+    border-color:1px solid red;
+}
+.action-buttons, .reset-actions {
+    height:20%;
+    width:50%;
+}
