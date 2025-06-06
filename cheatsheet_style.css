@@ -1,0 +1,84 @@
+:root {
+    --blue:rgb(145, 191, 202);
+    --orange:rgb(231, 180, 120);
+    --light-yellow:rgb(250, 243, 181);
+    --dark-tan:rgb(206, 185, 155);
+}
+body {
+    background: #6e17e8;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent 100px), url(https://images.demiplane.com//elements/daggerheart/classes/class-wizard-detail.jpg); */
+    background: linear-gradient(90deg,rgba(110, 23, 232, 1) 0%, rgba(245, 225, 47, 1) 100%);
+    font-family: sans-serif;
+    position:relative;
+    padding:50px;
+}
+.nav-container {
+    display:flex;
+    position:sticky;
+    top:0;
+}
+.nav-menu {
+    display:flex;
+    flex:1;
+    position:fixed;
+    top:0;
+    list-style: none;
+    color:white;
+    font-size:24px;
+    background: #6e17e8;
+    background: linear-gradient(90deg,rgba(110, 23, 232, 1) 0%, rgba(245, 225, 47, 1) 100%);
+    width:100%;
+}
+li {
+    flex:1;
+    text-wrap: nowrap;
+    text-align: center;
+    padding:10px;
+}
+.page-title {
+    margin-top:70px;
+    text-align: center;
+    color:white;
+    font-size:50px;
+}
+a:link {
+    color:white;
+    text-decoration: none;
+}
+a:visited {
+    color:white;
+    text-decoration: none;
+}
+
+/* Cheat Sheet Page */
+.cheat-container {
+    display:flex;
+    flex-direction: column;
+    margin:20px;
+}
+.trait-container {
+    display:flex;
+    flex-wrap:wrap;
+    border:3px solid rgb(201, 187, 3);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    width:100%;
+}
+.trait-name {
+    text-align: center;
+    margin:5px;
+}
+.agility, .strength, .finesse, .knowledge, .instinct, .presence {
+    border:3px solid rgb(201, 187, 3);
+    border-radius: 8px;
+    background-color: purple;
+    margin:10px;
+    color:white;
+    font-weight: 500;
+    padding:10px;
+    width:30%;
+    height:20%;
+    flex:1;
+}

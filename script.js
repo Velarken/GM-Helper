@@ -9,6 +9,10 @@ const d10PlusButton = document.querySelector(".d10plus");
 const d12PlusButton = document.querySelector(".d12plus");
 const d20PlusButton = document.querySelector(".d20plus");
 const d100PlusButton = document.querySelector(".d100plus");
+
+const hopePlusButton = document.querySelector(".player-plus");
+const hopeDisplay = document.querySelector(".hope-display");
+
 // Minus Buttons
 const d4MinusButton = document.querySelector(".d4minus");
 const d6MinusButton = document.querySelector(".d6minus");
@@ -77,9 +81,36 @@ fear1.addEventListener('click', () => markFear(fear1));
 fear2.addEventListener('click', () => markFear(fear2));
 fear3.addEventListener('click', () => markFear(fear3));
 
-/* 
-    Somehow dice dont roll if there is only a count of 1
+// Player Economy Trackers
+hopePlusButton.addEventListener('click', () => modifyPlayer(0,"hope"));
+const luna = {class:"ranger",subclass:"none",level:10,hope:0,stress:0,actions:0};
+const ravy = {class:"rogue",subclass:"none",level:10,hope:0,stress:0,actions:0};
+const jasper = {class:"wizard",subclass:"seraph",level:10,hope:0,stress:0,actions:0};
+const players = [luna,ravy,jasper];
+
+/*
+Attempt to use this function to get element ids or create similar to get classes. 
+This should cut down on the number of event listeners and constructors that need to be written out
 */
+function getElement(element) {
+  return document.getElementById(element);
+}
+
+function getClass(className) {
+    return document.getElementsByClassName(className);
+}
+
+
+function modifyPlayer(key,tracker) {
+    if (tracker === "hope") {
+        players[key].hope +=1;
+        hopeDisplay.textContent = players[key].hope;
+    } else if (tracker === "stress") {
+        players[key].stress += 1;
+    } else if (tracker === "actions") {
+        players[key].actions += 1;
+    }
+}
 
 const d4 = {name:"d4",sides:4,count:1,key:0,display:d4CountDisplay,output:d4rollOutput};
 const d6 = {name:"d6",sides:6,count:1,key:1,display:d6CountDisplay,output:d6rollOutput};
